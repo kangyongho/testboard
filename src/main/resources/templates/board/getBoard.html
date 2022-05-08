@@ -1,0 +1,49 @@
+<html xmlns:th="http://www.thymeleaf.org"
+xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+
+<head>
+<title>게시글 상세</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/center.css"/>
+</head>
+
+<div class="center">
+<h1 class="text-center">게시글 상세</h1>
+<form class="form-inline" th:action="@{/board/updateBoard}" method="post">
+<table class="table table-hover table-striped table-bordered">
+	<tr>
+		<td class="col-md-2" th:text="제목"></td>
+		<td><input name="seq" type="hidden" th:value="${board.seq}">
+		<input class="form-control col-md-8" name="title" type="text" th:value="${board.title}"></td>
+	</tr>
+	<tr>
+		<td class="col-md-2" th:text="작성자"></td>
+		<td th:text="${board.member.name}"></td>
+	</tr>
+	<tr>
+		<td class="col-md-2" th:text="내용"></td>
+		<td><textarea class="col-md-10" rows="5" name="content" th:text="${board.content}"></textarea></td>
+	</tr>
+	<tr>
+		<td class="col-md-2" th:text="조회수"></td>
+		<td th:text="${board.cnt}"></td>
+	</tr>
+</table>
+<div class="text-right">
+<input type="submit" value="게시글 수정">
+</div>
+</form>
+<div class="text-right">
+	<a th:href="@{/board/insertBoard}">글등록</a>&nbsp;&nbsp;&nbsp;
+	<a sec:authorize="hasRole('ROLE_ADMIN')" 
+	th:href="@{/board/deleteBoard(seq=${board.seq})}">글삭제</a>&nbsp;&nbsp;&nbsp;
+	<a th:href="@{/board/getBoardList}">글목록</a>
+</div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+</html>

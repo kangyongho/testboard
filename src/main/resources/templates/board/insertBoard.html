@@ -1,0 +1,41 @@
+<html xmlns:th="http://www.thymeleaf.org"
+xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+
+<head>
+<title>새글 등록</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/center.css"/>
+</head>
+
+<div class="center">
+<h1>게시글 등록</h1>
+<form th:action="@{/board/insertBoard}" method="post">
+<table class="table table-hover table-striped table-bordered">
+	<tr>
+		<td class="col-md-2" th:text="제목"></td>
+		<td><input class="form-control col-md-8" name="title" type="text"></td>
+	</tr>
+	<tr>
+		<td class="col-md-2" th:text="작성자"></td>
+		<td><span sec:authentication="principal.member.name"></span></td>
+	</tr>
+	<tr>
+		<td class="col-md-2" th:text="내용"></td>
+		<td><textarea class="col-md-10" rows="5" name="content"></textarea></td>
+	</tr>
+</table>
+<div class="text-right">
+<input type="submit" value="게시글 등록">
+</div>
+</form>
+<div class="text-right">
+<a th:href="@{/board/getBoardList}">글목록</a>&nbsp;&nbsp;&nbsp;
+</div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+</html>

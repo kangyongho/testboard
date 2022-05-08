@@ -1,0 +1,84 @@
+<html xmlns:th="http://www.thymeleaf.org"
+xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/center.css"/>
+<title>게시글 목록</title>
+</head>
+
+<div class="center">
+	<h1 class="text-center">게시글 목록</h1>
+	<div class="text-right">
+	<span sec:authorize="isAuthenticated()">
+		<b><font color="red">
+		<span sec:authentication="principal.member.name"></span>
+		</font></b> 님 환영합니다.....................................
+		<a th:href="@{/system/logout}">로그아웃</a>&nbsp;&nbsp;&nbsp;
+		<a th:href="@{/admin/adminPage}">게시판 관리</a>
+	</span>
+	</div>
+	<!-- 검색 시작 -->
+	<form th:action="@{/board/getBoardList}" method="post">
+	<table class="table table-hover table-striped">
+	<tr>
+		<td align="right">
+			<select name="searchCondition">
+			<option value="TITLE">제목</option>
+			<option value="CONTENT">내용</option>
+			</select>
+			<input name="searchKeyword" type="text"/>
+			<input type="submit" value="검색"/>
+		</td>
+	</tr>
+	</table>
+	</form>
+	<!-- 검색종료 -->
+	<table class="table table-hover table-striped">
+		<thead>
+		<tr>
+			<th scope="col">번호</th>
+			<th scope="col">제목</th>
+			<th scope="col">작성자</th>
+			<th scope="col">등록일</th>
+			<th scope="col">조회수</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr th:each="board, state : ${boardList}">
+			<td th:text="${state.count}">
+			<td><a th:href="@{/board/getBoard(seq=${board.seq})}" th:text="${board.title}"></a></td>
+			<td th:text="${board.member.name}">
+			<td th:text="${#dates.format(board.createDate, 'yyyy-MM-dd')}">
+			<td th:text="${board.cnt}">
+		</tr>
+		</tbody>
+	</table>
+	<!-- 페이징 -->
+	<div th:if="${!boardList.isEmpty()}" class="text-center">
+		<ul class="pagination justify-content-center">
+			<li class="page-item" th:classappend="${!boardList.hasPrevious} ? 'disabled'">
+				<a class="page-link" th:href="@{|?page=${boardList.number-1}|}"><span>이전</span></a>
+			</li>
+			<li th:each="page: ${#numbers.sequence(0, boardList.totalPages-1)}"
+				th:if="${page >= boardList.number-5 and page <= boardList.number+5}"
+                th:classappend="${page == boardList.number} ? 'active'" 
+                class="page-item">
+                <a th:text="${page}" class="page-link" th:href="@{|?page=${page}|}"></a>
+			</li>
+			<li class="page-item" th:classappend="${!boardList.hasNext} ? 'disabled'">
+				<a class="page-link" th:href="@{|?page=${boardList.number+1}|}"><span>다음</span></a>
+			</li>
+		</ul>
+	</div>
+	<div class="text-right">
+	<a th:href="@{/board/insertBoard}">게시글 등록</a>
+	</div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+</html>
