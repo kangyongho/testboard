@@ -12,6 +12,7 @@ springboot로 게시판 만들어보기
 <img src="https://img.shields.io/badge/Thymeleaf-#005F0F?style=flat-square&logo=Thymeleaf&logoColor=white"/>
 <img src="https://img.shields.io/badge/MySQL-#4479A1?style=flat-square&logo=MySQL&logoColor=white"/>
 <img src="https://img.shields.io/badge/Spring Security-#6DB33F?style=flat-square&logo=Spring Security&logoColor=white"/>
+<img src="https://img.shields.io/badge/React-61DAFB?style=flat&logo=React&logoColor=white"/>
 springboot, jpa, thymeleaf, h2 database, mysql, spring security
 
 구현동기:
