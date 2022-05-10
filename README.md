@@ -7,8 +7,7 @@ springboot로 게시판 만들어보기
 `id: admin` `pw: admin321`
 
 ###### 사용기술
-<img src="https://img.shields.io/badge/springboot-6DB33F?style=flat-square&logo=Spring Boot&logoColor=white"/>
-<img src="https://img.shields.io/badge/Spring Security-6DB33F?style=flat-square&logo=Spring Security&logoColor=white"/>
+<img src="https://img.shields.io/badge/springboot-6DB33F?style=flat-square&logo=Spring Boot&logoColor=white"/><img src="https://img.shields.io/badge/Spring Security-6DB33F?style=flat-square&logo=Spring Security&logoColor=white"/>
 <img src="https://img.shields.io/badge/jpa-59666C?style=flat-square&logo=Hibernate&logoColor=white"/>
 <img src="https://img.shields.io/badge/h2-0078D4?style=flat-square&logo=h2 database&logoColor=white"/>
 <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=MySQL&logoColor=white"/>
