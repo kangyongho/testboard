@@ -6,22 +6,27 @@ springboot로 게시판 만들어보기
 `id: member` `pw: member321`
 `id: admin` `pw: admin321`
 
-###### 사용기술
+###### 사용기술 및 IDE
 <img src="https://img.shields.io/badge/springboot-6DB33F?style=flat-square&logo=Spring Boot&logoColor=white"/><img src="https://img.shields.io/badge/Spring Security-6DB33F?style=flat-square&logo=Spring Security&logoColor=white"/>
 <img src="https://img.shields.io/badge/jpa-59666C?style=flat-square&logo=Hibernate&logoColor=white"/>
 <img src="https://img.shields.io/badge/h2-0078D4?style=flat-square&logo=h2 database&logoColor=white"/>
 <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=MySQL&logoColor=white"/>
 <img src="https://img.shields.io/badge/Thymeleaf-005F0F?style=flat-square&logo=Thymeleaf&logoColor=white"/>
 <img src="https://img.shields.io/badge/Java-007396?style=flat-square&logo=Java&logoColor=white"/>
+<img src="https://img.shields.io/badge/Bootstrap-7952B3?style=flat-square&logo=Bootstrap&logoColor=white"/>
+<img src="https://img.shields.io/badge/Eclipse IDE-2C2255?style=flat-square&logo=Eclipse IDE&logoColor=white"/>
 
-구현동기:
+###### 구현동기
 - 그동안 잊고 있었던 MVC 모델과 스프링의 의존성 주입 테스트 공부하기
 - JPA ORM 사용
 - SpringBoot 활용해보기
 - Java Interface 가 필요한 상황 익히기
 
-참고자료: 스프링 부트 퀵스타트 - 채규태 지음
-추가개발: Paging, BootStrap CSS 적용
+###### 참고자료
+스프링 부트 퀵스타트 - 채규태 지음
+
+###### 추가개발
+Paging, Bootstrap CSS 적용
 
 ## 프로젝트 레이어 구조도
 ![autodraw testboard architecture](https://user-images.githubusercontent.com/14036077/167409041-cb41f423-c76a-4116-8c2c-8c832ca39ec3.png)
