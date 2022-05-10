@@ -18,8 +18,10 @@ springboot로 게시판 만들어보기
 추가개발: Paging, BootStrap CSS 적용
 
 ## 프로젝트 레이어 구조도
-testboard architecture img:
 ![autodraw testboard architecture](https://user-images.githubusercontent.com/14036077/167409041-cb41f423-c76a-4116-8c2c-8c832ca39ec3.png)
+
+## 프로젝트 패키지 구조도
+![testboard package architecture](https://user-images.githubusercontent.com/14036077/167633514-5d5625a2-7ab5-4577-a5c5-f8fcf41d9a3f.jpg)
 
 ## MVC Layer
 `Dispatcher Servlet` `View` `Controller`
