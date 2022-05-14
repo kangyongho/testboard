@@ -2,7 +2,7 @@
 springboot로 게시판 만들어보기
 
 ###### 접속정보
-[`http://testboard.duckdns.org`][12]{:target="\_blank"}  
+[`http://testboard.duckdns.org`](http://testboard.duckdns.org){:target="\_blank"}  
 `id: member` `pw: member321`  
 `id: admin` `pw: admin321`  
 
@@ -342,4 +342,4 @@ QBoard QueryDSL 객체 메서드 통해 데이터베이스 검색 Query 동적 �
 [9]: https://github.com/kangyongho/testboard/blob/main/src/main/java/com/example/demo/security/SecurityConfig.java
 [10]: https://github.com/kangyongho/testboard/blob/main/src/main/java/com/example/demo/controller/SecurityController.java
 [11]: https://github.com/kangyongho/testboard/blob/main/src/main/java/com/example/demo/service/BoardServiceImpl.java
-[12]: http://testboard.duckdns.org
+
