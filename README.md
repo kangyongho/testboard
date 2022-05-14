@@ -2,9 +2,9 @@
 springboot로 게시판 만들어보기
 
 ###### 접속정보
-`http://testboard.duckdns.org`
-`id: member` `pw: member321`
-`id: admin` `pw: admin321`
+`http://testboard.duckdns.org`  
+`id: member` `pw: member321`  
+`id: admin` `pw: admin321`  
 
 ###### 사용기술 및 IDE
 <img src="https://img.shields.io/badge/springboot-6DB33F?style=flat-square&logo=Spring Boot&logoColor=white"/><img src="https://img.shields.io/badge/Spring Security-6DB33F?style=flat-square&logo=Spring Security&logoColor=white"/>
@@ -35,14 +35,14 @@ Paging, Bootstrap CSS 적용
 ![testboard package architecture](https://user-images.githubusercontent.com/14036077/167633514-5d5625a2-7ab5-4577-a5c5-f8fcf41d9a3f.jpg)
 
 ## MVC Layer
-`Dispatcher Servlet` `View` `Controller`
-thymeleaf 템플릿 문법 사용
-Controller URL 및 파리미터 처리
+`Dispatcher Servlet` `View` `Controller`  
+thymeleaf 템플릿 문법 사용  
+Controller URL 및 파리미터 처리  
 ## Business Layer
-`Service Interface` `ServiceImpl` `Repository` `Entity`
-Service 인터페이스 구현체인 ServiceImpl 사용
-Entity 객체에 Table 연관관계 매핑
-DAO 개념에서 나온 Repository를 통한 객체 영속화 작업
+`Service Interface` `ServiceImpl` `Repository` `Entity`  
+Service 인터페이스 구현체인 ServiceImpl 사용  
+Entity 객체에 Table 연관관계 매핑  
+DAO 개념에서 나온 Repository를 통한 객체 영속화 작업  
 
 ## MVC Layer code
 #### getBoardList.html [link][0]
@@ -148,7 +148,7 @@ getBoardList는 Model 객체에 정보매핑후 view(html)에 전달 - 게시판
 
     	Page<Board> getBoardList(Search search, int page);
     }
-인터페이스 사용하여 기능변경시 구현클래스만 교체하여 소스코드 수정 최소화
+인터페이스 사용하여 기능변경시 구현클래스만 교체하여 소스코드 수정 최소화  
 만약 기능변경을 하지 않을 목적이면 인터페이스 사용없이 서비스클래스로 기능구현해야함
 
 #### BoardServiceImpl.class [link][3]
@@ -190,7 +190,7 @@ getBoardList는 Model 객체에 정보매핑후 view(html)에 전달 - 게시판
     		return boardRepo.findAll(builder, pageable);
     	}
     }
-서비스기능 구현 클래스
+서비스기능 구현 클래스  
 페이징: PageRequest > Pageable 리턴. 매개변수 page부터 5개의 데이터만 조회하도록 쿼리를 생성해준다.
 
 ### Domain, Entity, Repository 영속성 객체
@@ -309,7 +309,7 @@ springboot jpa CrudRepository 상속하여 CRUD 구현
     		return PasswordEncoderFactories.createDelegatingPasswordEncoder();
     	}
     }
-antMatchers 이용해 url 접근권한 설정
+antMatchers 이용해 url 접근권한 설정  
 PasswordEncoder @Bean 등록후 패스워드암호화 사용 (수동으로 회원가입 초기화 코드 작성) [link][10]
 
 #### 검색기능: QueryDSL 사용 (해당 부분 스프링부트 퀵스타트 참고했습니다)
