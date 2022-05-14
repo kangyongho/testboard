@@ -191,6 +191,7 @@ getBoardList는 Model 객체에 정보매핑후 view(html)에 전달 - 게시판
     	}
     }
 서비스기능 구현 클래스
+페이징: PageRequest > Pageable 리턴. 매개변수 page부터 5개의 데이터만 조회하도록 쿼리를 생성해준다.
 
 ### Domain, Entity, Repository 영속성 객체
 #### Board.class [link][4]
