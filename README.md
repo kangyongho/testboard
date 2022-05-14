@@ -2,7 +2,7 @@
 springboot로 게시판 만들어보기
 
 ###### 접속정보
-[`http://testboard.duckdns.org`][12]  
+[`http://testboard.duckdns.org`][12]{:target="_blank"}  
 `id: member` `pw: member321`  
 `id: admin` `pw: admin321`  
 
