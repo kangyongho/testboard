@@ -4,7 +4,7 @@ springboot로 게시판 만들어보기
 ###### 접속정보
 [`testboard.duckdns.org`][12]  
 `id: member` `pw: member321` > 로그인시 글삭제 권한 없음  
-`id: admin` `pw: admin321`   > 로그인시 글삭제 권한 
+`id: admin` `pw: admin321`   > 로그인시 글삭제 권한 있음
 
 ###### 사용기술 및 IDE
 <img src="https://img.shields.io/badge/springboot-6DB33F?style=flat-square&logo=Spring Boot&logoColor=white"/><img src="https://img.shields.io/badge/Spring Security-6DB33F?style=flat-square&logo=Spring Security&logoColor=white"/>
